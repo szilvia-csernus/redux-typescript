@@ -8,4 +8,7 @@ export const store = configureStore({
     }
 })
 
+// getState is a function type and here we need the type of the return value
+export type RootState = ReturnType<typeof store.getState>;
+
 export type AppDispatch = typeof store.dispatch;
